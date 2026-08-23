@@ -1,0 +1,12 @@
+- Goal: Find all unique triplets whose sum is 0.
+- Sort the array first. Sorting helps with both two pointers and handling duplicates.
+- Fix one number nums[i], then use:
+    - left = i + 1
+    - right = last index
+- Compare nums[i] + nums[left] + nums[right]:
+    - Sum < 0 -> move left++ to increase the sum.
+    - Sum > 0 -> move right-- to decrease the sum.
+    - Sum == 0 -> save the triplet, move both pointers, and skip duplicates.
+- Skip duplicate values for i as well, so the same triplet isn't added again.
+- Time Complexity: O(n²)
+- Key idea: Fix one number + use two pointers to efficiently find the other two.
