@@ -1,0 +1,6 @@
+Reorder List Logic
+  - Store all linked list nodes in a vector so they can be accessed from both the beginning and the end.
+  - Use two pointers: left starts from the beginning and right starts from the end.
+  - Alternately connect nodes as: first -> last -> second -> second-last -> ...
+  - Continue until left and right meet. If one middle node remains, attach it at the end.
+  - Finally, set the last node's next to nullptr to avoid cycles caused by the original links.
