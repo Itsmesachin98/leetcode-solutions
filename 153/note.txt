@@ -1,0 +1,10 @@
+- Since the array is sorted and rotated, the minimum element is the point where the rotation happened.
+
+- Compare nums[mid] with nums[right] to determine which half contains the minimum:
+    - If nums[mid] > nums[right], the minimum must be to the right of mid, so left = mid + 1.
+    - Otherwise, the minimum is at mid or to its left, so right = mid.
+
+Continue until left == right. Both pointers will point to the minimum element.
+
+Time Complexity: O(log n)
+Space Complexity: O(1)
