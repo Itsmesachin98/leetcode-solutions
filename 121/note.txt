@@ -1,0 +1,21 @@
+We need to buy the stock first and sell it later to get the maximum profit.
+
+Go through the prices from left to right. While doing this, always remember the
+lowest price we have seen so far because buying at the lowest possible price gives us 
+the best chance of making more profit.
+
+For every current price, imagine selling the stock today:
+    profit = current price - lowest price seen so far
+
+If this profit is greater than our previous maximum profit, update maxProfit.
+
+After checking the profit, update lowestPrice if the current price is cheaper.
+This cheaper price might give us a better profit on a future day.
+
+Example: [7, 1, 5, 3, 6, 4]
+When we reach 6, the lowest price seen before it is 1, so selling at 6 gives a profit of 5.
+
+We only need to traverse the array once.
+
+Time: O(n)
+Space: O(1)
