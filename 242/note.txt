@@ -1,0 +1,6 @@
+Valid Anagram — Logic
+- If the strings have different lengths, they cannot be anagrams.
+- Use a frequency array of size 26 to track the difference in character counts.
+- For each position, increment the count for the character in s and decrement it for the character in t.
+- If s and t contain the same characters with the same frequencies, all values in the frequency array will be 0.
+- If any value is not 0, the strings are not anagrams.
