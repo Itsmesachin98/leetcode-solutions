@@ -1,0 +1,14 @@
+Logic
+
+- This solution works because arr is a permutation of numbers from 0 to n - 1.
+- While traversing the array, keep track of the maximum value (maxi) seen so far.
+
+- If at index i, maxi == i, it means all values from 0 to i are contained within the current
+  portion of the array.
+
+- Therefore, this portion can be treated as an independent chunk because sorting it will place 
+  its elements in their correct positions.
+  
+- Increment result whenever i == maxi.
+
+Key idea: A chunk ends whenever the largest value seen so far equals the current index.
