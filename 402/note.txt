@@ -1,0 +1,16 @@
+The goal is to create the smallest possible number after removing exactly k digits.
+
+- Use a vector as a stack to store digits of the smallest number built so far.
+
+- For each digit, remove previous digits that are larger than the current digit,
+  as replacing a larger digit with a smaller one earlier makes the number smaller.
+
+- Stop removing when k becomes 0 or the previous digit is smaller/equal.
+
+- If removals are still left after processing all digits, remove digits from the end,
+  since trailing digits have the least impact on making the number smaller.
+
+- Finally, skip leading zeros and build the result.
+- If no digits remain, return "0".
+
+Key idea: Always prefer a smaller digit in a more significant (earlier) position.
