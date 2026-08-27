@@ -1,0 +1,14 @@
+Car Fleet Logic
+
+- Calculate the time each car would take to reach the target.
+- Sort cars by their starting positions.
+- Traverse from right to left, starting with the car closest to the target.
+- Keep track of the maximum time seen so far (maxTime).
+
+- If a car behind takes more time than maxTime, it cannot catch the fleet ahead,
+  so it forms a new fleet.
+
+- Otherwise, it catches up with the fleet ahead and becomes part of that same fleet.
+
+Key idea: A slower car ahead determines the time of its entire fleet. Only cars with a
+greater arrival time than all cars ahead create a new fleet.
