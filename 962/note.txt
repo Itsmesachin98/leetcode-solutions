@@ -1,0 +1,15 @@
+Logic:
+
+- Build a monotonic decreasing stack of indices. Keep an index only when its value is
+  smaller than all previously kept values. These indices are the best possible starting 
+  points for a wide ramp.
+
+- Traverse from right to left. For each j, while nums[stack.top()] <= nums[j],
+  a valid ramp is formed.
+
+- Update the maximum width and remove that starting index. Since we are moving j from
+  right to left, this is the farthest possible j for that index, so it cannot 
+  produce a wider ramp later.
+
+Time: O(n) — each index is pushed and popped at most once.
+Space: O(n)
