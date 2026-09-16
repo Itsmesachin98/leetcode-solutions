@@ -49,7 +49,7 @@ TreeNode* buildBinaryTree(vector<optional<int>>& arr) {
     return root;
 }
 
-void helper(TreeNode* root, int level, vector<int> result) {
+void helper(TreeNode* root, int level, vector<int>& result) {
     if (root == nullptr) return;
 
     if (level == result.size()) result.push_back(root->val);
@@ -60,8 +60,6 @@ void helper(TreeNode* root, int level, vector<int> result) {
 
 
 vector<int> rightSideView(TreeNode* root) {
-    if (root == nullptr) return {};
-
     vector<int> result;
     int level = 0;
 
