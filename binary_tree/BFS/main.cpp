@@ -49,6 +49,25 @@ TreeNode* buildBinaryTree(vector<optional<int>>& arr) {
     return root;
 }
 
+void print(TreeNode* root) {
+    if (root == nullptr) return;
+
+    queue<TreeNode*> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        TreeNode* current = q.front();
+        q.pop();
+
+        cout << current->val << " ";
+
+        if (current->left != nullptr) q.push(current->left);
+        if (current->right != nullptr) q.push(current->right);
+    }
+
+    cout << endl;
+}
+
 void levelOrderTraversal(TreeNode* root, vector<int>& arr) {
     if (root == nullptr) return;
 
